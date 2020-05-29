@@ -1,0 +1,392 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Coming Soon", cursive;
+  cursor: crosshair;
+  background: #000;
+  color: #fff;
+}
+.section-title {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+  margin: 50px auto;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 20px;
+  width: 40%;
+  font-size: 3em;
+}
+@media (max-width: 897px) {
+  .section-title {
+    width: 100%;
+  }
+}
+.navbar-toggler {
+  position: fixed;
+  cursor: pointer;
+  right: 10px;
+  padding: 10px;
+  font-size: 2em;
+  color: #fff;
+  display: none;
+}
+.logo {
+  position: fixed;
+  color: #fff;
+  cursor: pointer;
+  font-size: 2em;
+  z-index: 2;
+  padding: 10px;
+}
+.logo span {
+  color: #445438;
+}
+.wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "header header" "main main";
+}
+.wrapper .header {
+  grid-area: header;
+}
+.wrapper .header .navbar {
+  background: #000;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.wrapper .header .navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.wrapper .header .navbar ul li {
+  padding: 15px;
+}
+.wrapper .header .navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.wrapper .header .navbar ul li a:hover {
+  color: #cbccc8;
+  transition: 0.5s;
+}
+.wrapper main {
+  grid-area: main;
+}
+.wrapper main .containers {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+.wrapper main .containers .left-content {
+  background: url("/adventure5.278a7ecd.jpg") center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper main .containers .left-content .left-content-container {
+  color: #fff;
+  text-align: center;
+}
+.wrapper main .containers .left-content .left-content-container h1 {
+  font-size: 5em;
+}
+.wrapper
+  main
+  .containers
+  .left-content
+  .left-content-container
+  .learn-more-btn {
+  padding: 13px 45px;
+  cursor: pointer;
+  background: #000;
+  border: 2px solid #000;
+  color: #fff;
+}
+.wrapper
+  main
+  .containers
+  .left-content
+  .left-content-container
+  .learn-more-btn:hover {
+  background: none;
+  transition: 0.5s;
+}
+.wrapper main .containers .right-content {
+  width: 50%;
+  height: 100vh;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper main .containers .right-content .right-content-container {
+  width: 50%;
+  margin: 20px auto;
+}
+.wrapper main .containers .right-content .right-content-container h1 {
+  text-align: center;
+  border-bottom: 2px solid #e6e4de;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.wrapper
+  main
+  .containers
+  .right-content
+  .right-content-container
+  .read-more-btn {
+  padding: 14px 30px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin: 20px auto;
+}
+.wrapper
+  main
+  .containers
+  .right-content
+  .right-content-container
+  .read-more-btn:hover {
+  background: #fff;
+  transition: 0.5s;
+  color: #000;
+}
+@media (max-width: 1000px) {
+  .wrapper .header .navbar-toggler {
+    display: block;
+    z-index: 2;
+  }
+  .wrapper .header .navbar ul {
+    display: block;
+    max-height: 0px;
+  }
+  .wrapper .header .navbar ul li {
+    text-align: center;
+    cursor: pointer;
+  }
+  .wrapper .header .navbar ul li:hover {
+    background: #445438;
+    transition: 0.5s;
+  }
+  .wrapper .header .navbar .showing {
+    max-height: 20em;
+  }
+  .wrapper main .containers {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .wrapper main .containers .right-content {
+    width: 100%;
+    height: auto;
+  }
+  .wrapper main .containers .left-content {
+    width: 100%;
+  }
+}
+.mid-wrapper {
+  max-width: 70%;
+  margin: 50px auto;
+}
+.mid-wrapper #about {
+  width: 100%;
+  margin: 0 auto;
+}
+.mid-wrapper #about .about-img {
+  background: url("/beachDaylight.38ddc274.jpg") center no-repeat;
+  background-size: cover;
+  height: 50vh;
+  width: 100%;
+}
+.mid-wrapper #about .about-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+.mid-wrapper #about .about-container .about-desc {
+  text-align: center;
+}
+.mid-wrapper #about .about-container .about-desc h3 {
+  border-bottom: 2px solid #fff;
+  width: 30%;
+  margin: 20px auto;
+  padding-bottom: 20px;
+}
+.mid-wrapper #about .about-container .about-desc p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+  text-align: left;
+}
+.mid-img {
+  background: url("/adventureOverview.182b38e4.jpg") center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin-bottom: 100px;
+}
+#services {
+  max-width: 70%;
+  margin: 10px auto;
+}
+#services .services-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#services .services-container .service {
+  margin: 20px 40px;
+  padding: 30px;
+}
+#services .services-container .service .service-title {
+  margin: 20px auto;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  border-bottom: 2px solid #445438;
+  padding-bottom: 10px;
+}
+#services .services-container .service .service-desc {
+  text-align: left;
+}
+#services .services-container .service i {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+@media (max-width: 1000px) {
+  #services .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media (max-width: 1000px) {
+  .mid-wrapper {
+    margin: 1000px auto 50px auto;
+    height: auto;
+  }
+  .mid-wrapper #about .about-container {
+    display: block;
+  }
+}
+footer {
+  margin-bottom: 5px;
+}
+footer .footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+footer .footer-container .contact-container {
+  margin-top: 50px;
+}
+footer .footer-container .contact-container h1 {
+  text-align: center;
+}
+footer .footer-container .contact-container .contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .footer-container .contact-container .contact-form .contact-field {
+  padding: 13px 25px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #445438;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 20px auto;
+}
+footer .footer-container .contact-container .contact-form .contact-btn {
+  padding: 13px 25px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #445438;
+  color: #fff;
+  letter-spacing: 4px;
+}
+footer .footer-container .contact-container .contact-form .contact-btn:hover {
+  background: #445438;
+  transition: 0.5s;
+}
+footer .footer-container .social-media-container {
+  text-align: center;
+  height: 48vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-container .social-media-container .social-media i {
+  margin: 0 25px;
+  cursor: pointer;
+  font-size: 3em;
+}
+footer .footer-container .social-media-container .social-media i:hover {
+  color: #445438;
+  transition: 0.5s;
+}
+footer .footer-container h1 {
+  font-size: 3em;
+  font-style: italic;
+  letter-spacing: 5px;
+  text-align: center;
+}
+footer .footer-container h1 span {
+  color: #445438;
+}
+@media (max-width: 1500px) {
+  footer .footer-container {
+    display: block;
+  }
+  footer .footer-container .social-media-container {
+    border: none;
+  }
+  footer .footer-container .copyright {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  footer .footer-container .contact-container {
+    border: none;
+    padding-top: 40px;
+  }
+}
+
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
